@@ -45,7 +45,18 @@ map('n', '<leader>sn', function()
 end, { desc = '[S]earch [N]eovim files' })
 
 -- Git (fugitive)
-map("n", "<leader>gd", ":rightbelow Gvdiffsplit<CR>", { desc = "Git diff in vertical split (right)", noremap = true })
+local opts = { noremap = true, silent = true }
+
+-- vim-fugitive keymappings
+vim.api.nvim_set_keymap("n", "<leader>gs", ":G<CR>", opts)                       -- Open Git status
+vim.api.nvim_set_keymap("n", "<leader>ga", ":Git add %<CR>", opts)               -- Stage current file
+vim.api.nvim_set_keymap("v", "<leader>ga", ":Git add -p<CR>", opts)              -- Stage selected hunk
+vim.api.nvim_set_keymap("n", "<leader>gu", ":Git restore --staged %<CR>", opts)  -- Unstage current file
+vim.api.nvim_set_keymap("v", "<leader>gu", ":Git restore --staged -p<CR>", opts) -- Unstage selected hunk
+vim.api.nvim_set_keymap("n", "<leader>gc", ":Git commit<CR>", opts)              -- Open commit window
+vim.api.nvim_set_keymap("n", "<leader>gca", ":Git commit -a<CR>", opts)          -- Commit all changes (auto-stage)
+vim.api.nvim_set_keymap("n", "<leader>gp", ":Git push<CR>", opts)                -- Push to remote
+vim.api.nvim_set_keymap("n", "<leader>gd", ":Gdiffsplit<CR>", opts)              -- View diff for current file
 
 -- Window navigation
 map("n", "<C-h>", "<C-w>h", { desc = "Move to left window" })
