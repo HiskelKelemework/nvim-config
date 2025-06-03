@@ -5,7 +5,7 @@ local map = vim.keymap.set
 
 -- File Explorer (neo-tree)
 map("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle file explorer" })
-map("n", "<leader>gs", ":Neotree git_status<CR>", { desc = "Toggle git status tree" })
+map("n", "<leader>egs", ":Neotree git_status<CR>", { desc = "Toggle git status tree" })
 
 -- Telescope
 map('n', '<leader>sh', "<cmd>Telescope help_tags<CR>", { desc = '[S]earch [H]elp' })
