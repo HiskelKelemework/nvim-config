@@ -2,6 +2,7 @@
 return {
   "nvim-neo-tree/neo-tree.nvim",
   branch = "v3.x",
+  lazy = false, -- neo-tree will lazily load itself
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-tree/nvim-web-devicons",
@@ -12,10 +13,6 @@ return {
       close_if_last_window = true,
       enable_git_status = true,
       filesystem = {
-        filtered_items = {
-          hide_dotfiles = false,
-          hide_gitignored = false,
-        },
         sync_root_with_cwd = true,     -- Sync tree root with Neovim's current working directory
         follow_current_file = {
           enabled = true,              -- Automatically focus the file in the active buffer
@@ -23,8 +20,8 @@ return {
         },
         use_libuv_file_watcher = true, -- Use OS-level file watchers for better performance
         filtered_items = {
-          visible = false,             -- Hide filtered items by default
-          hide_dotfiles = true,        -- Hide dotfiles (e.g., .git, .gitignore)
+          visible = true,              -- Hide filtered items by default
+          hide_dotfiles = false,       -- Hide dotfiles (e.g., .git, .gitignore)
           hide_gitignored = true,      -- Respect .gitignore
           hide_by_name = {             -- Specific files/directories to hide
             'node_modules',
@@ -52,7 +49,7 @@ return {
         },
       },
       window = {
-        position = "right",
+        position = "left",
         width = 40,
       },
     })

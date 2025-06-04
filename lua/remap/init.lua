@@ -3,6 +3,9 @@
 
 local map = vim.keymap.set
 
+-- jk replaces <Esc> in insert mode
+map("i", "jk", "<Esc>", { desc = "Escape from insert mode" })
+
 -- File Explorer (neo-tree)
 map("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle file explorer" })
 map("n", "<leader>egs", ":Neotree git_status<CR>", { desc = "Toggle git status tree" })
@@ -18,6 +21,7 @@ map('n', '<leader>sd', "<cmd>Telescope diagnostics<CR>", { desc = '[S]earch [D]i
 map('n', '<leader>sr', "<cmd>Telescope resume<CR>", { desc = '[S]earch [R]esume' })
 map('n', '<leader>s.', "<cmd>Telescope oldfiles<CR>", { desc = '[S]earch Recent Files ("." for repeat)' })
 map('n', '<leader><leader>', "<cmd>Telescope buffers<CR>", { desc = '[ ] Find existing buffers' })
+map("n", "<leader>gt", "<cmd>Telescope lsp_type_definitions<CR>", { buffer = bufnr, desc = "Go to type definition" })
 
 map('n', '<leader>/', function()
   local builtin = require 'telescope.builtin'

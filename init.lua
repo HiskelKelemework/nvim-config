@@ -1,11 +1,12 @@
 -- Neovim configuration optimized for QWERTY keyboard
 -- File: ~/.config/nvim/init.lua
-
 -- Set leader key to space for QWERTY-friendly access
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Basic settings for performance and usability
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.number = true             -- Show line numbers
 vim.opt.relativenumber = true     -- Relative line numbers
 vim.opt.tabstop = 2               -- 2 spaces for tabs
