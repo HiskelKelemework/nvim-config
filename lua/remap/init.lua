@@ -89,3 +89,11 @@ map('n', '<leader>cc', ':cclose<CR>', { desc = "Close quick fix list" })
 
 -- Keybindings for diagnostics
 vim.keymap.set('n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', { desc = 'Show diagnostics in float' })
+
+
+-- fallback brace/parenthesis matching
+--
+-- vim.keymap.set("n", "]}", "/}<CR><Esc>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "])", "/)<CR><Esc>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "[{", "/{<CR><Esc>", { noremap = true, silent = true })
+-- vim.keymap.set("n", "[(", "/(<CR><Esc>", { noremap = true, silent = true })

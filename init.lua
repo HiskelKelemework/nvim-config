@@ -30,6 +30,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- enable matchit to enhance brace/parenthesis matching
+vim.g.loaded_matchit = 1
+vim.cmd("packadd matchit")
+
 -- Diagnostic Config
 -- See :help vim.diagnostic.Opts
 vim.diagnostic.config {
