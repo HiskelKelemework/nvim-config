@@ -3,14 +3,8 @@ return {
   "neovim/nvim-lspconfig",
   dependencies = {
     -- Mason for managing LSP servers
-    { "williamboman/mason.nvim", opts = { ensure_installed = { "stylua" } } },
-    {
-      "williamboman/mason-lspconfig.nvim",
-      opts = {
-        ensure_installed = { "lua_ls", "pyright", "ts_ls", "clangd", "jdtls" },
-        automatic_installation = true,
-      },
-    },
+    { "williamboman/mason.nvim" },
+    { "williamboman/mason-lspconfig.nvim" },
     -- Existing CMP dependencies
     { "hrsh7th/nvim-cmp" },
     { "hrsh7th/cmp-nvim-lsp" },
@@ -24,8 +18,8 @@ return {
 
     -- Initialize Mason-LSPConfig
     require("mason-lspconfig").setup({
-      ensure_installed = { "lua_ls", "pyright", "ts_ls", "clangd", "jdtls", "prismals" }, -- Match your servers
-      automatic_installation = true,                                                      -- Auto-install servers
+      ensure_installed = { "lua_ls", "pyright", "clangd", "jdtls", "prismals" }, -- Match your servers
+      automatic_installation = true,                                             -- Auto-install servers
     })
 
     -- LSP settings
