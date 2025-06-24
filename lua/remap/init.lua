@@ -2,9 +2,9 @@
 -- File: ~/.config/nvim/lua/remap.lua
 
 local map = vim.keymap.set
---
+
 -- jk replaces <Esc> + write file in insert mode
-map("i", "jk", "<Esc><cmd>w<CR>", { desc = "Escape from insert mode" })
+map("i", "jk", "<Esc>", { desc = "Escape from insert mode" })
 
 -- File Explorer (neo-tree)
 map("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle file explorer" })
