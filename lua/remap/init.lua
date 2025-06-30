@@ -5,6 +5,8 @@ local map = vim.keymap.set
 
 -- jk replaces <Esc> + write file in insert mode
 map("i", "jk", "<Esc>", { desc = "Escape from insert mode" })
+map("n", "<C-d>", "<C-d>zz", { desc = "Jump down half a page and center cursor vertically" })
+map("n", "<C-u>", "<C-u>zz", { desc = "Jump up half a page and center cursor vertically" })
 
 -- File Explorer (neo-tree)
 map("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle file explorer" })

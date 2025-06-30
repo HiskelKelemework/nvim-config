@@ -1,5 +1,6 @@
 return {
   "folke/todo-comments.nvim",
+  lazy = false,
   dependencies = { "nvim-lua/plenary.nvim" },
   opts = {
     keywords = {
@@ -17,7 +18,7 @@ return {
     },
   },
   keys = {
-    { "]t", function() require("todo-comments").jump_next({ keywords = { "TODO", "FIX", "WARN" } }) end, desc = "Next todo comment" },
-    { "[t", function() require("todo-comments").jump_prev({ keywords = { "TODO", "FIX", "WARN" } }) end, desc = "Previous todo comment" },
+    { "]t", function() require("todo-comments").jump_next({ keywords = { "TODO", "FIX", "WARN", "NOTE", "HACK" } }) end, desc = "Next todo comment" },
+    { "[t", function() require("todo-comments").jump_prev({ keywords = { "TODO", "FIX", "WARN", "NOTE", "HACK" } }) end, desc = "Previous todo comment" },
   },
 }
