@@ -18,8 +18,8 @@ return {
 
     -- Initialize Mason-LSPConfig
     require("mason-lspconfig").setup({
-      ensure_installed = { "lua_ls", "pyright", "clangd", "jdtls", "prismals", "rust-analyzer" }, -- Match your servers
-      automatic_installation = true,                                                              -- Auto-install servers
+      ensure_installed = { "lua_ls", "pyright", "clangd", "jdtls", "prismals" }, -- Match your servers
+      automatic_installation = true,                                             -- Auto-install servers
     })
 
     -- LSP settings
