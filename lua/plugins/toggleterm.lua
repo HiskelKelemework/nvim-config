@@ -15,6 +15,6 @@ return {
     }
 
     vim.keymap.set({ 'n', 't' }, '<leader>tt', '<cmd>ToggleTerm<CR>', { desc = 'Toggle terminal' })
-    vim.keymap.set('t', 'jk', [[<C-\><C-n>]], { noremap = true, silent = true })
+    vim.keymap.set('t', '<Esc>', [[<C-\><C-n>]], { noremap = true, silent = true })
   end,
 }

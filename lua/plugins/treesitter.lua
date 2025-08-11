@@ -42,6 +42,8 @@ return {
         "query",
         "vimdoc",
         "c",
+        "elixir",
+        "gleam",
       },
       incremental_selection = {
         enable = true,
