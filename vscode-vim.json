@@ -77,6 +77,39 @@
       "before": ["<leader>", "h", "p"],
       "commands": ["git.openChange"],
       "when": "editorTextFocus"
+    },
+    {
+      "before": ["<leader>", "t", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"],
+      "when": "editorTextFocus || terminalFocus"
+    },
+    {
+      "before": ["z", "c"],
+      "commands": ["editor.fold"]
+    },
+    {
+      "before": ["z", "o"],
+      "commands": ["editor.unfold"]
+    },
+    {
+      "before": ["z", "a"],
+      "commands": ["editor.toggleFold"]
+    },
+    {
+      "before": ["z", "M"],
+      "commands": ["editor.foldAll"]
+    },
+    {
+      "before": ["z", "R"],
+      "commands": ["editor.unfoldAll"]
+    },
+    {
+      "before": ["z", "j"],
+      "commands": ["editor.gotoNextFold"]
+    },
+    {
+      "before": ["z", "k"],
+      "commands": ["editor.gotoPreviousFold"]
     }
   ],
   "vim.insertModeKeyBindings": [
