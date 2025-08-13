@@ -14,6 +14,7 @@ return {
       highlight = {
         enable = true,
       },
+      fold = { enable = true },
       -- enable indentation
       indent = { enable = true },
       -- enable autotagging (w/ nvim-ts-autotag plugin)
@@ -44,6 +45,7 @@ return {
         "c",
         "elixir",
         "gleam",
+        "rust",
       },
       incremental_selection = {
         enable = true,

@@ -1,8 +1,12 @@
 return {
   'stevearc/oil.nvim',
-  ---@module 'oil'
-  ---@type oil.SetupOpts
   opts = {
+    view_options = {
+      show_hidden = true,
+      is_hidden_file = function(_, _)
+        return false
+      end,
+    },
     win_options = {
       signcolumn = "yes:2",
     },
