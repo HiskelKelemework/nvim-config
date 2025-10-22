@@ -4,7 +4,13 @@ return {
   config = function()
     require("telescope").setup({
       defaults = {
-        file_ignore_patterns = { "%.git/", "node_modules" }, -- Keep your existing ignore patterns
+        file_ignore_patterns = {
+          "%.git/",
+          ".next",
+          ".npm",
+          "coverage",
+          "node_modules",
+        },
         mappings = {
           i = {
             ["<C-j>"] = require("telescope.actions").move_selection_next,

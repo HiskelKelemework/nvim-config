@@ -18,12 +18,11 @@ return {
 
     -- Initialize Mason-LSPConfig
     require("mason-lspconfig").setup({
-      ensure_installed = { "lua_ls", "pyright", "clangd", "jdtls", "prismals", "rust_analyzer", "elixirls" }, -- Match your servers
-      automatic_installation = true,                                                                          -- Auto-install servers
+      ensure_installed = { "lua_ls", "pyright", "ts_ls", "clangd", "jdtls", "prismals", "rust_analyzer", "elixirls" }, -- Match your servers
+      automatic_installation = true,                                                                                   -- Auto-install servers
     })
 
     -- LSP settings
-    local lspconfig = require("lspconfig")
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
     -- Define on_attach function to enable inlay hints
@@ -91,7 +90,7 @@ return {
 
     -- Set up each server with its configuration
     for lsp, config in pairs(servers) do
-      lspconfig[lsp].setup(vim.tbl_deep_extend("force", { capabilities = capabilities }, config))
+      vim.lsp.config(lsp, config)
     end
 
     -- CMP settings (unchanged from your config)

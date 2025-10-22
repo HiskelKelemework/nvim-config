@@ -10,6 +10,7 @@ return {
       "L3MON4D3/LuaSnip",             -- Snippet engine
       "saadparwaiz1/cmp_luasnip",     -- LuaSnip completion source
       "rafamadriz/friendly-snippets", -- Preconfigured snippets
+      'zbirenbaum/copilot-cmp'
     },
     config = function()
       local cmp = require("cmp")
@@ -54,6 +55,7 @@ return {
           end, { "i", "s" }),
         }),
         sources = cmp.config.sources({
+          { name = 'copilot' },
           { name = "nvim_lsp", priority = 1000 },
           { name = "luasnip",  priority = 750 },
           { name = "buffer",   priority = 500, keyword_length = 3 },
